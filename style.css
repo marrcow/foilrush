@@ -179,7 +179,7 @@ h1, h2, h3, h4 {
   transition: opacity 0.2s;
 }
 .nav-links a:hover { opacity: 1; }
-.nav-links .btn-primary { opacity: 1; font-size: 0.9rem; padding: 0.6rem 1.4rem; }
+.nav-links .btn-primary { opacity: 1; font-size: 0.9rem; padding: 0.6rem 1.4rem; color: #000000; }
 
 /* Mobile toggle */
 .nav-toggle {
