@@ -424,6 +424,55 @@ h1, h2, h3, h4 {
   .step-number { font-size: 3rem; }
 }
 
+/* ── Compatibility ── */
+#compatibility {
+  padding: var(--section-pad) 0;
+  background: var(--dark);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.compat-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.compat-body {
+  color: rgba(255,255,255,0.65);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-top: 1rem;
+  max-width: 420px;
+}
+
+.compat-badges {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.compat-badge {
+  border: 2px solid var(--white);
+  padding: 1rem 1.25rem;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: var(--white);
+  transition: background 0.2s, color 0.2s;
+}
+.compat-badge:hover {
+  background: var(--white);
+  color: var(--dark);
+}
+
+@media (max-width: 768px) {
+  .compat-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
 /* ── Specs ── */
 #specs {
   padding: var(--section-pad) 0;
