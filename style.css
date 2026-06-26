@@ -146,10 +146,24 @@ h1, h2, h3, h4 {
   font-family: var(--font-head);
   font-weight: 900;
   font-size: 1.5rem;
-  color: var(--white);
   letter-spacing: -0.02em;
+  display: inline-flex;
+  line-height: 1;
 }
-.nav-logo span { color: var(--orange); }
+
+.logo-foil {
+  background: var(--white);
+  color: var(--dark);
+  padding: 0.15em 0.35em;
+}
+
+.logo-rush {
+  background: var(--dark);
+  color: var(--white);
+  padding: 0.15em 0.35em;
+  border: 2px solid var(--white);
+  margin-left: -2px;
+}
 
 .nav-links {
   display: flex;
@@ -660,20 +674,13 @@ h1, h2, h3, h4 {
 }
 
 /* ── Accessibility & polish ── */
-::selection {
-  background: var(--orange);
-  color: var(--white);
-}
-
 :focus-visible {
   outline: 2px solid var(--orange);
   outline-offset: 3px;
 }
 
-/* Nav logo plain white — no gradient in B&W theme */
-#site-nav .nav-logo {
-  background: none;
-  -webkit-background-clip: unset;
-  -webkit-text-fill-color: var(--white);
-  background-clip: text;
+/* ::selection uses white block to match B&W chess theme */
+::selection {
+  background: var(--white);
+  color: var(--dark);
 }
