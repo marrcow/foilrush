@@ -198,9 +198,9 @@ h1, h2, h3, h4 {
 .hero-bg {
   position: absolute;
   inset: -10%;
-  background-image: url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=1800&q=80');
+  background-image: url('https://images.pexels.com/photos/35368942/pexels-photo-35368942.jpeg?auto=compress&cs=tinysrgb&w=1800');
   background-size: cover;
-  background-position: center;
+  background-position: center 40%;
   animation: kenBurns 18s ease-in-out infinite alternate;
 }
 
@@ -446,9 +446,9 @@ h1, h2, h3, h4 {
 .lifestyle-bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1567899382643-8e0e478c4d5f?auto=format&fit=crop&w=1600&q=80');
+  background-image: url('https://images.pexels.com/photos/33834676/pexels-photo-33834676.jpeg?auto=compress&cs=tinysrgb&w=1600');
   background-size: cover;
-  background-position: center 30%;
+  background-position: center 50%;
 }
 
 .lifestyle-overlay {
