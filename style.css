@@ -274,3 +274,64 @@ h1, h2, h3, h4 {
   .hero-ctas { flex-direction: column; }
   .hero-ctas a { text-align: center; }
 }
+
+/* ── Shared section typography ── */
+.section-eyebrow {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  color: var(--orange);
+  margin-bottom: 0.75rem;
+}
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  margin-bottom: 3rem;
+  letter-spacing: -0.02em;
+}
+
+/* ── Features ── */
+#features {
+  padding: var(--section-pad) 0;
+  background: var(--light);
+  color: var(--ink);
+}
+#features .section-eyebrow { color: var(--orange); }
+#features .section-title { color: var(--ink); }
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.feature-card:hover {
+  box-shadow: 0 8px 40px rgba(255,85,0,0.12);
+  transform: translateY(-4px);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--ink);
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.65;
+}
