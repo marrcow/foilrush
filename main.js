@@ -12,11 +12,13 @@ const navLinks = document.getElementById('nav-links');
 toggle.addEventListener('click', () => {
   const open = navLinks.classList.toggle('open');
   toggle.setAttribute('aria-expanded', String(open));
+  navLinks.setAttribute('aria-hidden', String(!open));
 });
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('open');
     toggle.setAttribute('aria-expanded', 'false');
+    navLinks.setAttribute('aria-hidden', 'true');
   });
 });
 
@@ -32,3 +34,16 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 revealEls.forEach(el => observer.observe(el));
+
+// ── Add to Cart placeholder ──
+const addToCartBtn = document.querySelector('.buy-cta');
+if (addToCartBtn) {
+  addToCartBtn.addEventListener('click', () => {
+    addToCartBtn.textContent = 'Added to Cart ✓';
+    addToCartBtn.style.background = '#22a06b';
+    setTimeout(() => {
+      addToCartBtn.textContent = 'Add to Cart';
+      addToCartBtn.style.background = '';
+    }, 2000);
+  });
+}

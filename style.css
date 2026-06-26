@@ -97,6 +97,14 @@ h1, h2, h3, h4 {
   transform: translateX(0);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-left, .reveal-right {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 /* ── Navigation ── */
 #site-nav {
   position: fixed;
@@ -180,6 +188,7 @@ h1, h2, h3, h4 {
 /* ── Hero ── */
 #hero {
   position: relative;
+  min-height: 100vh;
   min-height: 100svh;
   display: flex;
   align-items: center;
