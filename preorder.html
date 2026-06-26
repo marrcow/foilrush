@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoilRush — Pre-Order</title>
+  <meta name="description" content="Pre-order the FoilRush Scooter Pump Foil. Be first in line — secure your board before launch." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .preorder-page { min-height: 100vh; display: flex; flex-direction: column; }
+
+    .preorder-hero {
+      background: #000;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding: 7rem 0 4rem;
+      text-align: center;
+    }
+    .preorder-hero .badge {
+      display: inline-block;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      color: #000;
+      background: #fff;
+      padding: 0.3em 0.9em;
+      margin-bottom: 1.5rem;
+    }
+    .preorder-hero h1 {
+      font-size: clamp(1.75rem, 5vw, 3.5rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+    .preorder-hero p {
+      color: rgba(255,255,255,0.6);
+      font-size: 1.05rem;
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .preorder-main { flex: 1; padding: 4rem 0 6rem; background: #0a0a0a; }
+
+    .preorder-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .preorder-summary { position: sticky; top: 6rem; }
+    .summary-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 2rem;
+    }
+    .summary-brand {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 0.5rem;
+    }
+    .summary-name { font-size: 1.4rem; font-weight: 900; color: #fff; margin-bottom: 1rem; line-height: 1.2; }
+    .summary-price { font-family: var(--font-head); font-size: 2rem; font-weight: 900; color: #fff; margin-bottom: 0.5rem; }
+    .summary-note { font-size: 0.85rem; color: rgba(255,255,255,0.45); margin-bottom: 2rem; line-height: 1.5; }
+    .summary-includes { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; }
+    .summary-includes h4 {
+      font-size: 0.7rem; letter-spacing: 0.15em; color: rgba(255,255,255,0.4);
+      font-weight: 700; margin-bottom: 1rem;
+    }
+    .summary-includes ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .summary-includes li { font-size: 0.9rem; color: rgba(255,255,255,0.7); display: flex; align-items: center; gap: 0.6rem; }
+    .summary-includes li::before { content: ''; width: 6px; height: 6px; background: #fff; flex-shrink: 0; }
+
+    .preorder-form-wrap h2 { font-size: 1.6rem; font-weight: 900; color: #fff; margin-bottom: 0.5rem; }
+    .form-subtitle { color: rgba(255,255,255,0.5); font-size: 0.9rem; margin-bottom: 2.5rem; line-height: 1.6; }
+
+    .preorder-form { display: flex; flex-direction: column; gap: 1.25rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .field { display: flex; flex-direction: column; gap: 0.4rem; }
+    .field label {
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.5); text-transform: uppercase;
+    }
+    .field input, .field select, .field textarea {
+      background: #111;
+      border: 1px solid rgba(255,255,255,0.15);
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      padding: 0.75rem 1rem;
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+      border-radius: 0;
+      appearance: none;
+    }
+    .field input:focus, .field select:focus, .field textarea:focus { border-color: #fff; }
+    .field input::placeholder, .field textarea::placeholder { color: rgba(255,255,255,0.2); }
+    .field select option { background: #111; color: #fff; }
+    .field textarea { resize: vertical; min-height: 90px; }
+    .field-note { font-size: 0.78rem; color: rgba(255,255,255,0.35); margin-top: 0.2rem; }
+    .form-divider { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 0.5rem 0; }
+    .form-section-label {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em;
+      color: rgba(255,255,255,0.35); text-transform: uppercase; margin-bottom: -0.25rem;
+    }
+    .submit-btn {
+      background: #fff; color: #000; border: none;
+      font-family: var(--font-head); font-weight: 900; font-size: 1rem;
+      letter-spacing: 0.05em; padding: 1rem 2rem; cursor: pointer;
+      width: 100%; transition: background 0.2s, transform 0.15s; margin-top: 0.5rem;
+    }
+    .submit-btn:hover { background: #e0e0e0; transform: translateY(-2px); }
+    .form-legal { font-size: 0.78rem; color: rgba(255,255,255,0.3); line-height: 1.5; text-align: center; }
+
+    .form-success {
+      display: none; text-align: center; padding: 3rem 2rem;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .form-success .success-icon { font-size: 3rem; margin-bottom: 1rem; }
+    .form-success h3 { font-size: 1.5rem; font-weight: 900; color: #fff; margin-bottom: 0.75rem; }
+    .form-success p { color: rgba(255,255,255,0.55); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem; }
+    .form-success a { color: #fff; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+
+    @media (max-width: 800px) {
+      .preorder-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .preorder-summary { position: static; }
+      .preorder-hero { padding: 6rem 0 3rem; }
+      .summary-price { font-size: 1.75rem; }
+    }
+    @media (max-width: 500px) {
+      .form-row { grid-template-columns: 1fr; }
+      .preorder-main { padding: 2.5rem 0 4rem; }
+      .submit-btn { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body class="preorder-page">
+
+  <nav id="site-nav" class="nav-scrolled">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo"><span class="logo-foil">Foil</span><span class="logo-rush">Rush</span></a>
+      <div style="display:flex;align-items:center;gap:1.5rem;">
+        <a href="index.html" style="color:rgba(255,255,255,0.5);font-size:0.9rem;font-family:var(--font-head);font-weight:700;" data-i18n="preorder.back.nav">← Back to product</a>
+        <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">PL</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="preorder-hero">
+    <div class="container">
+      <div class="badge" data-i18n="preorder.badge">PRE-ORDER NOW</div>
+      <h1 data-i18n="preorder.h1">Secure Your Board.<br>Be First to Fly.</h1>
+      <p data-i18n="preorder.sub">We're taking pre-orders for the first production run. Reserve yours with no payment today — we'll confirm details before shipment.</p>
+    </div>
+  </div>
+
+  <div class="preorder-main">
+    <div class="container">
+      <div class="preorder-layout">
+
+        <div class="preorder-summary">
+          <img class="summary-img"
+               src="https://images.pexels.com/photos/9150893/pexels-photo-9150893.jpeg?auto=compress&cs=tinysrgb&w=800"
+               alt="FoilRush scooter pump foil board in action" />
+          <p class="summary-brand">FOILRUSH</p>
+          <p class="summary-name">Scooter Pump Foil<br>96cm — Universal Mount</p>
+          <div class="summary-price" data-price>$799</div>
+          <p class="price-note" data-price-note></p>
+          <p class="summary-note" data-i18n="preorder.summary.note">No payment charged now. We'll contact you to confirm your order before shipment. Free shipping worldwide.</p>
+          <div class="summary-includes">
+            <h4 data-i18n="preorder.includes.title">What's included</h4>
+            <ul>
+              <li>96cm adjustable deck with EVA grip</li>
+              <li>Carbon fiber foil mast (65cm)</li>
+              <li>Fuselage + front &amp; rear wings</li>
+              <li>Scooter handlebar (removable)</li>
+              <li>Full hardware kit</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="preorder-form-wrap">
+          <h2 data-i18n="preorder.form.h2">Reserve Your FoilRush</h2>
+          <p class="form-subtitle" data-i18n="preorder.form.sub">Fill in your details below. No credit card required — we'll reach out to confirm availability and finalize your order.</p>
+
+          <form class="preorder-form" id="preorder-form" novalidate>
+
+            <p class="form-section-label" data-i18n="preorder.section.you">Your details</p>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="first-name" data-i18n="preorder.label.first">First name</label>
+                <input type="text" id="first-name" name="first_name" placeholder="Jan" autocomplete="given-name" required />
+              </div>
+              <div class="field">
+                <label for="last-name" data-i18n="preorder.label.last">Last name</label>
+                <input type="text" id="last-name" name="last_name" placeholder="Kowalski" autocomplete="family-name" required />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="email" data-i18n="preorder.label.email">Email address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+            </div>
+
+            <div class="field">
+              <label for="phone">
+                <span data-i18n="preorder.label.phone">Phone number</span>
+                <span style="opacity:.5;font-weight:400" data-i18n="preorder.label.phone.opt">(optional)</span>
+              </label>
+              <input type="tel" id="phone" name="phone" placeholder="+48 000 000 000" autocomplete="tel" />
+            </div>
+
+            <hr class="form-divider" />
+            <p class="form-section-label" data-i18n="preorder.section.ship">Shipping address</p>
+
+            <div class="field">
+              <label for="country" data-i18n="preorder.label.country">Country</label>
+              <select id="country" name="country" required>
+                <option value="" disabled selected data-i18n="preorder.country.placeholder">Select country…</option>
+                <option value="PL">Poland</option>
+                <option value="DE">Germany</option>
+                <option value="FR">France</option>
+                <option value="ES">Spain</option>
+                <option value="IT">Italy</option>
+                <option value="NL">Netherlands</option>
+                <option value="PT">Portugal</option>
+                <option value="US">United States</option>
+                <option value="AU">Australia</option>
+                <option value="GB">United Kingdom</option>
+                <option value="OTHER">Other</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="city" data-i18n="preorder.label.city">City</label>
+              <input type="text" id="city" name="city" placeholder="Warsaw" autocomplete="address-level2" required />
+            </div>
+
+            <hr class="form-divider" />
+            <p class="form-section-label" data-i18n="preorder.section.exp">Your experience</p>
+
+            <div class="field">
+              <label for="level" data-i18n="preorder.label.level">Water sport background</label>
+              <select id="level" name="level">
+                <option value="" disabled selected data-i18n="preorder.level.placeholder">Select one…</option>
+                <option value="beginner" data-i18n="preorder.level.beginner">Complete beginner</option>
+                <option value="surfer" data-i18n="preorder.level.surfer">Surfer</option>
+                <option value="kite" data-i18n="preorder.level.kite">Kitesurfer / Windsurfer</option>
+                <option value="foiler" data-i18n="preorder.level.foiler">Already foiling</option>
+                <option value="wakeboarder" data-i18n="preorder.level.wake">Wakeboarder / Wakefoiler</option>
+                <option value="other" data-i18n="preorder.level.other">Other water sport</option>
+              </select>
+              <span class="field-note" data-i18n="preorder.level.note">Helps us send you the right setup tips.</span>
+            </div>
+
+            <div class="field">
+              <label for="message">
+                <span data-i18n="preorder.label.message">Anything else?</span>
+                <span style="opacity:.5;font-weight:400" data-i18n="preorder.message.opt">(optional)</span>
+              </label>
+              <textarea id="message" name="message" data-i18n-placeholder="preorder.message.ph" placeholder="Questions, foil brand you already own, special requests…"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn" data-i18n="preorder.submit">Reserve My FoilRush →</button>
+
+            <p class="form-legal" data-i18n="preorder.legal">By submitting you agree to be contacted about your pre-order. No payment is taken at this stage. We respect your privacy and will never share your data.</p>
+
+          </form>
+
+          <div class="form-success" id="form-success">
+            <div class="success-icon">✓</div>
+            <h3 data-i18n="preorder.success.h3">You're on the list!</h3>
+            <p>
+              <span data-i18n="preorder.success.p">Thanks for your pre-order. We'll email you at</span>
+              <strong id="success-email"></strong>
+              <span data-i18n="preorder.success.p2">with confirmation details and estimated shipping timeline.</span>
+            </p>
+            <a href="index.html" data-i18n="preorder.back">← Back to FoilRush</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+  <script>
+    // Textarea placeholder translation (not handled by innerHTML)
+    function applyPlaceholders() {
+      const lang = localStorage.getItem('fr_lang') || 'en';
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.dataset.i18nPlaceholder;
+        if (translations[lang] && translations[lang][key]) {
+          el.placeholder = translations[lang][key];
+        }
+      });
+    }
+    applyPlaceholders();
+
+    // Re-apply placeholders when lang toggles
+    document.getElementById('lang-toggle').addEventListener('click', applyPlaceholders);
+
+    // Form submit
+    document.getElementById('preorder-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      const firstName = document.getElementById('first-name').value.trim();
+      const lastName = document.getElementById('last-name').value.trim();
+      const country = document.getElementById('country').value;
+      if (!firstName || !lastName || !email || !country) {
+        const firstInvalid = this.querySelector(':invalid');
+        if (firstInvalid) firstInvalid.focus();
+        return;
+      }
+      document.getElementById('success-email').textContent = ' ' + email + ' ';
+      this.style.display = 'none';
+      const success = document.getElementById('form-success');
+      success.style.display = 'block';
+      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  </script>
+</body>
+</html>

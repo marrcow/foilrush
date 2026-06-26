@@ -169,7 +169,7 @@ h1, h2, h3, h4 {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: clamp(1rem, 2vw, 2rem);
 }
 .nav-links a {
   font-family: var(--font-head);
@@ -181,6 +181,24 @@ h1, h2, h3, h4 {
 }
 .nav-links a:hover { opacity: 1; }
 .nav-links .btn-primary { opacity: 1; font-size: 0.9rem; padding: 0.6rem 1.4rem; color: #000000; }
+
+.lang-toggle {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.7);
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  padding: 0.35rem 0.7rem;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+.lang-toggle:hover {
+  border-color: var(--white);
+  color: var(--white);
+  background: rgba(255,255,255,0.08);
+}
 
 /* Mobile toggle */
 .nav-toggle {
@@ -342,7 +360,7 @@ h1, h2, h3, h4 {
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
   gap: 1.5rem;
 }
 
@@ -384,30 +402,31 @@ h1, h2, h3, h4 {
 }
 
 .steps {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  max-width: 760px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  max-width: 100%;
 }
 
 .step {
   display: flex;
-  gap: 2rem;
-  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  border-top: 2px solid rgba(255,255,255,0.15);
+  padding-top: 1.5rem;
 }
 
 .step-number {
   font-family: var(--font-head);
-  font-size: clamp(4rem, 8vw, 6rem);
+  font-size: clamp(3rem, 5vw, 5rem);
   font-weight: 900;
   color: var(--orange);
   line-height: 1;
-  min-width: 2ch;
   opacity: 0.9;
 }
 
 .step-body h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
   color: var(--white);
@@ -415,13 +434,14 @@ h1, h2, h3, h4 {
 
 .step-body p {
   color: rgba(255,255,255,0.7);
-  font-size: 1rem;
+  font-size: 0.95rem;
   line-height: 1.7;
 }
 
-@media (max-width: 500px) {
-  .step { flex-direction: column; gap: 0.75rem; }
-  .step-number { font-size: 3rem; }
+@media (max-width: 700px) {
+  .steps { grid-template-columns: 1fr; gap: 2rem; }
+  .step { flex-direction: row; align-items: flex-start; gap: 1.25rem; border-top: none; border-left: 2px solid rgba(255,255,255,0.15); padding-top: 0; padding-left: 1.25rem; }
+  .step-number { font-size: 3rem; min-width: 2ch; }
 }
 
 /* ── Specs ── */
@@ -478,7 +498,7 @@ h1, h2, h3, h4 {
 .lifestyle-bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://images.pexels.com/photos/33834676/pexels-photo-33834676.jpeg?auto=compress&cs=tinysrgb&w=1600');
+  background-image: url('https://images.pexels.com/photos/9739246/pexels-photo-9739246.jpeg?auto=compress&cs=tinysrgb&w=1600');
   background-size: cover;
   background-position: center 50%;
 }
@@ -512,7 +532,7 @@ h1, h2, h3, h4 {
 
 .reviews-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: 1.5rem;
 }
 
@@ -586,10 +606,62 @@ h1, h2, h3, h4 {
 
 .board-svg {
   width: 100%;
-  max-width: 340px;
+  max-width: 300px;
   display: block;
   margin: 0 auto;
   filter: drop-shadow(0 20px 40px rgba(255,255,255,0.06));
+}
+
+.buy-photo {
+  width: 100%;
+  display: block;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ── View tabs & panels ── */
+.view-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.view-tab {
+  flex: 1;
+  background: transparent;
+  border: none;
+  border-right: 1px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.45);
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.6rem 0.4rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.view-tab:last-child { border-right: none; }
+
+.view-tab:hover {
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.75);
+}
+
+.view-tab.active {
+  background: var(--white);
+  color: #000000;
+}
+
+.view-panel {
+  display: none;
+}
+
+.view-panel.active {
+  display: block;
 }
 
 .buy-brand {
@@ -617,6 +689,14 @@ h1, h2, h3, h4 {
   margin-bottom: 0.75rem;
 }
 
+.price-note {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  margin-top: -0.5rem;
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+
 .buy-tagline {
   font-size: 0.9rem;
   color: rgba(255,255,255,0.55);
@@ -629,6 +709,8 @@ h1, h2, h3, h4 {
   font-size: 1.1rem;
   padding: 1.1rem;
   margin-bottom: 1.5rem;
+  text-align: center;
+  display: block;
 }
 
 .buy-badges {
@@ -680,6 +762,48 @@ h1, h2, h3, h4 {
 @media (max-width: 600px) {
   .footer-inner { flex-direction: column; text-align: center; }
   .footer-links { justify-content: center; flex-wrap: wrap; gap: 1.25rem; }
+}
+
+/* ── Cookie consent banner ── */
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: #111;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+}
+
+#cookie-banner p { margin: 0; flex: 1; min-width: 200px; }
+
+.cookie-actions { display: flex; gap: 0.75rem; flex-shrink: 0; }
+
+.cookie-actions button {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  padding: 0.45rem 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+#cookie-accept { background: #fff; color: #000; }
+#cookie-decline { background: transparent; color: rgba(255,255,255,0.5); border: 1px solid rgba(255,255,255,0.2); }
+#cookie-decline:hover { color: #fff; border-color: #fff; }
+
+@media (max-width: 500px) {
+  #cookie-banner { flex-direction: column; align-items: flex-start; }
 }
 
 /* ── Accessibility & polish ── */

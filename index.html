@@ -19,11 +19,12 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="nav-links" aria-hidden="true">
-        <li><a href="#features">Features</a></li>
-        <li><a href="#how-it-works">How It Works</a></li>
-        <li><a href="#specs">Specs</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#buy" class="btn-primary">Buy Now</a></li>
+        <li><a href="#features" data-i18n="nav.features">Features</a></li>
+        <li><a href="#how-it-works" data-i18n="nav.how">How It Works</a></li>
+        <li><a href="#specs" data-i18n="nav.specs">Specs</a></li>
+        <li><a href="#reviews" data-i18n="nav.reviews">Reviews</a></li>
+        <li><a href="preorder.html" class="btn-primary" data-i18n="nav.buy">Pre-Order</a></li>
+        <li><button class="lang-toggle" id="lang-toggle" aria-label="Switch language">PL</button></li>
       </ul>
     </div>
   </nav>
@@ -32,12 +33,12 @@
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="container hero-content">
-      <p class="hero-eyebrow">CHOOSE YOUR WAY TO FLY</p>
-      <h1>The Easiest Way<br>to Start Pump Foiling.</h1>
-      <p class="hero-sub">FoilRush gives you the sensation of flying above the water — no motor, no kite, no wave required. Just you, the board, and pure hydrodynamic lift.</p>
+      <p class="hero-eyebrow" data-i18n="hero.eyebrow">CHOOSE YOUR WAY TO FLY</p>
+      <h1 data-i18n="hero.h1">The Easiest Way<br>to Start Pump Foiling.</h1>
+      <p class="hero-sub" data-i18n="hero.sub">FoilRush gives you the sensation of flying above the water — no motor, no kite, no wave required. Just you, the board, and pure hydrodynamic lift.</p>
       <div class="hero-ctas">
-        <a href="#buy" class="btn-primary">Shop Now — $799</a>
-        <a href="#how-it-works" class="btn-ghost">See How It Works ↓</a>
+        <a href="preorder.html" class="btn-primary" data-i18n="hero.cta1">Pre-Order Now — <span data-price>$799</span></a>
+        <a href="#how-it-works" class="btn-ghost" data-i18n="hero.cta2">See How It Works ↓</a>
       </div>
     </div>
     <div class="hero-scroll-indicator">
@@ -47,28 +48,33 @@
 
   <section id="features">
     <div class="container">
-      <p class="section-eyebrow">WHY FOILRUSH</p>
-      <h2 class="section-title">Accessible Foiling.<br>Genuine Sensation.</h2>
+      <p class="section-eyebrow" data-i18n="features.eyebrow">WHY FOILRUSH</p>
+      <h2 class="section-title" data-i18n="features.title">Accessible Foiling.<br>Genuine Sensation.</h2>
       <div class="features-grid">
         <div class="feature-card reveal" data-delay="0">
           <div class="feature-icon">⚡</div>
-          <h3>No Motor. Pure Pump.</h3>
-          <p>Your body generates the lift. Shift your weight rhythmically and feel the board rise — zero emissions, zero engine noise, infinite flow state.</p>
+          <h3 data-i18n="features.f1.title">No Motor. Pure Pump.</h3>
+          <p data-i18n="features.f1.body">Your body generates the lift. Shift your weight rhythmically and feel the board rise — zero emissions, zero engine noise, infinite flow state.</p>
         </div>
         <div class="feature-card reveal" data-delay="100">
           <div class="feature-icon">🔗</div>
-          <h3>Compatible with Any Foil</h3>
-          <p>Already own a foil? Plug it in. FoilRush works with most foil systems on the market — no proprietary lock-in, no expensive ecosystem.</p>
+          <h3 data-i18n="features.f2.title">Compatible with Any Foil</h3>
+          <p data-i18n="features.f2.body">Already own a foil? Plug it in. FoilRush works with most foil systems on the market — no proprietary lock-in, no expensive ecosystem.</p>
         </div>
         <div class="feature-card reveal" data-delay="200">
           <div class="feature-icon">🌊</div>
-          <h3>Built for All Waters</h3>
-          <p>Lakes, rivers, ocean — flat water or open swell. The 96cm adjustable deck and high-efficiency wings handle any conditions.</p>
+          <h3 data-i18n="features.f3.title">Built for All Waters</h3>
+          <p data-i18n="features.f3.body">Lakes, rivers, ocean — flat water or open swell. The 96cm adjustable deck and high-efficiency wings handle any conditions.</p>
         </div>
         <div class="feature-card reveal" data-delay="300">
           <div class="feature-icon">⏱️</div>
-          <h3>Ready in Under 10 Min</h3>
-          <p>Quick-connect mast system, tool-free stance adjustment. Spend less time on the beach and more time in the air.</p>
+          <h3 data-i18n="features.f4.title">Ready in Under 10 Min</h3>
+          <p data-i18n="features.f4.body">Quick-connect mast system, tool-free stance adjustment. Spend less time on the beach and more time in the air.</p>
+        </div>
+        <div class="feature-card reveal" data-delay="400">
+          <div class="feature-icon">🛴</div>
+          <h3 data-i18n="features.f5.title">Removable Handlebar</h3>
+          <p data-i18n="features.f5.body">The scooter-style handlebar detaches in seconds. Use it to learn balance and pump technique, then ride without it once you've got lift dialled.</p>
         </div>
       </div>
     </div>
@@ -76,28 +82,28 @@
 
   <section id="how-it-works">
     <div class="container">
-      <p class="section-eyebrow">HOW IT WORKS</p>
-      <h2 class="section-title">Three Steps.<br>One Addiction.</h2>
+      <p class="section-eyebrow" data-i18n="how.eyebrow">HOW IT WORKS</p>
+      <h2 class="section-title" data-i18n="how.title">Three Steps.<br>One Addiction.</h2>
       <div class="steps">
         <div class="step reveal-left" data-delay="0">
           <div class="step-number">01</div>
           <div class="step-body">
-            <h3>Step On & Find Your Stance</h3>
-            <p>Stand on the wide EVA deck, adjust your foot position to shoulder width. The board is stable enough to stand on the water before you even start moving.</p>
+            <h3 data-i18n="how.s1.title">Step On & Find Your Stance</h3>
+            <p data-i18n="how.s1.body">Stand on the wide EVA deck, adjust your foot position to shoulder width. The board is stable enough to stand on the water before you even start moving.</p>
           </div>
         </div>
         <div class="step reveal-right" data-delay="150">
           <div class="step-number">02</div>
           <div class="step-body">
-            <h3>Pump to Generate Lift</h3>
-            <p>Bend your knees and shift weight front-to-back in a rhythmic motion. The high-efficiency wings convert that energy into hydrodynamic lift — the board starts to rise.</p>
+            <h3 data-i18n="how.s2.title">Pump to Generate Lift</h3>
+            <p data-i18n="how.s2.body">Bend your knees and shift weight front-to-back in a rhythmic motion. The high-efficiency wings convert that energy into hydrodynamic lift — the board starts to rise.</p>
           </div>
         </div>
         <div class="step reveal-left" data-delay="300">
           <div class="step-number">03</div>
           <div class="step-body">
-            <h3>Fly. Glide. Repeat.</h3>
-            <p>Once you're up, keep pumping to stay airborne. It takes most riders 20–30 minutes to get their first sustained flight — and nobody stops after that.</p>
+            <h3 data-i18n="how.s3.title">Fly. Glide. Repeat.</h3>
+            <p data-i18n="how.s3.body">Once you're up, keep pumping to stay airborne. It takes most riders 20–30 minutes to get their first sustained flight — and nobody stops after that.</p>
           </div>
         </div>
       </div>
@@ -106,20 +112,20 @@
 
   <section id="specs">
     <div class="container">
-      <p class="section-eyebrow">TECHNICAL SPECS</p>
-      <h2 class="section-title">The Details.</h2>
+      <p class="section-eyebrow" data-i18n="specs.eyebrow">TECHNICAL SPECS</p>
+      <h2 class="section-title" data-i18n="specs.title">The Details.</h2>
       <div class="reveal">
         <table class="specs-table" aria-label="Product Specifications">
           <tbody>
-            <tr><th>Board Length</th><td>96 cm (adjustable stance)</td></tr>
-            <tr><th>Foil Mast Height</th><td>65 cm</td></tr>
-            <tr><th>Max Rider Weight</th><td>100 kg</td></tr>
-            <tr><th>Deck Material</th><td>EVA foam grip pad, reinforced core</td></tr>
-            <tr><th>Mast Material</th><td>Carbon fiber — lightweight & ultra-rigid</td></tr>
-            <tr><th>Foil Compatibility</th><td>Universal mount — works with most foil brands</td></tr>
-            <tr><th>Recommended Level</th><td>All levels — beginners welcome</td></tr>
-            <tr><th>Setup Time</th><td>Under 10 minutes</td></tr>
-            <tr><th>Package Includes</th><td>Board, mast, fuselage, front & rear wings, hardware kit</td></tr>
+            <tr><th data-i18n="specs.r1.label">Board Length</th><td data-i18n="specs.r1.val">96 cm (adjustable stance)</td></tr>
+            <tr><th data-i18n="specs.r2.label">Foil Mast Height</th><td data-i18n="specs.r2.val">65 cm</td></tr>
+            <tr><th data-i18n="specs.r3.label">Max Rider Weight</th><td data-i18n="specs.r3.val">100 kg</td></tr>
+            <tr><th data-i18n="specs.r4.label">Deck Material</th><td data-i18n="specs.r4.val">EVA foam grip pad, reinforced core</td></tr>
+            <tr><th data-i18n="specs.r5.label">Mast Material</th><td data-i18n="specs.r5.val">Carbon fiber — lightweight & ultra-rigid</td></tr>
+            <tr><th data-i18n="specs.r6.label">Foil Compatibility</th><td data-i18n="specs.r6.val">Universal mount — works with most foil brands</td></tr>
+            <tr><th data-i18n="specs.r7.label">Recommended Level</th><td data-i18n="specs.r7.val">All levels — beginners welcome</td></tr>
+            <tr><th data-i18n="specs.r8.label">Setup Time</th><td data-i18n="specs.r8.val">Under 10 minutes</td></tr>
+            <tr><th data-i18n="specs.r9.label">Package Includes</th><td data-i18n="specs.r9.val">Board, mast, fuselage, front & rear wings, hardware kit</td></tr>
           </tbody>
         </table>
       </div>
@@ -131,38 +137,38 @@
     <div class="lifestyle-overlay"></div>
     <div class="container lifestyle-content reveal">
       <blockquote>
-        <p>"The first time you stay up, you'll never want to stop."</p>
+        <p data-i18n="lifestyle.quote">"The first time you stay up, you'll never want to stop."</p>
       </blockquote>
     </div>
   </section>
 
   <section id="reviews">
     <div class="container">
-      <p class="section-eyebrow">RIDERS</p>
-      <h2 class="section-title">They Flew.<br>They're Hooked.</h2>
+      <p class="section-eyebrow" data-i18n="reviews.eyebrow">RIDERS</p>
+      <h2 class="section-title" data-i18n="reviews.title">They Flew.<br>They're Hooked.</h2>
       <div class="reviews-grid">
         <article class="review-card reveal" data-delay="0">
           <div class="review-stars">★★★★★</div>
-          <p class="review-text">"I ride it on flat lake days when there's no surf. It's become my main cross-training tool — and honestly more fun than most sessions I've had on actual waves."</p>
+          <p class="review-text" data-i18n="reviews.r1.text">"I ride it on flat lake days when there's no surf. It's become my main cross-training tool — and honestly more fun than most sessions I've had on actual waves."</p>
           <footer class="review-author">
             <strong>Marcus T.</strong>
-            <span>Surfer · Malibu, CA</span>
+            <span data-i18n="reviews.r1.role">Surfer · Malibu, CA</span>
           </footer>
         </article>
         <article class="review-card reveal" data-delay="150">
           <div class="review-stars">★★★★★</div>
-          <p class="review-text">"Got my first lift within 20 minutes. I wasn't expecting it to feel so natural — the pumping motion clicks really fast. I was flying for 10 seconds by the end of session one."</p>
+          <p class="review-text" data-i18n="reviews.r2.text">"Got my first lift within 20 minutes. I wasn't expecting it to feel so natural — the pumping motion clicks really fast. I was flying for 10 seconds by the end of session one."</p>
           <footer class="review-author">
             <strong>Jenna K.</strong>
-            <span>Wing Foiler · Tarifa, Spain</span>
+            <span data-i18n="reviews.r2.role">Wing Foiler · Tarifa, Spain</span>
           </footer>
         </article>
         <article class="review-card reveal" data-delay="300">
           <div class="review-stars">★★★★★</div>
-          <p class="review-text">"Used my existing surf foil, plugged right in. Build quality is solid — carbon mast is properly stiff, no flex, no wobble. This is legit pump foil gear, not a toy."</p>
+          <p class="review-text" data-i18n="reviews.r3.text">"Used my existing surf foil, plugged right in. Build quality is solid — carbon mast is properly stiff, no flex, no wobble. This is legit pump foil gear, not a toy."</p>
           <footer class="review-author">
             <strong>Ryan O.</strong>
-            <span>Foil Surfer · Lake Tahoe, CA</span>
+            <span data-i18n="reviews.r3.role">Foil Surfer · Lake Tahoe, CA</span>
           </footer>
         </article>
       </div>
@@ -172,95 +178,62 @@
   <section id="buy">
     <div class="container buy-inner">
       <div class="buy-image reveal-left">
-        <svg class="board-svg" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FoilRush Scooter Pump Foil Board">
-          <defs>
-            <!-- Carbon weave pattern -->
-            <pattern id="carbon" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
-              <rect width="8" height="8" fill="#111"/>
-              <rect x="0" y="0" width="4" height="4" fill="#1a1a1a"/>
-              <rect x="4" y="4" width="4" height="4" fill="#1a1a1a"/>
-              <rect x="0" y="0" width="4" height="1" fill="#222"/>
-              <rect x="4" y="4" width="4" height="1" fill="#222"/>
-            </pattern>
-            <!-- Board shape clip -->
-            <clipPath id="boardClip">
-              <path d="M200,20 C260,20 310,60 330,120 L340,380 C340,430 310,470 280,490 L220,510 L180,510 L120,490 C90,470 60,430 60,380 L70,120 C90,60 140,20 200,20 Z"/>
-            </clipPath>
-            <!-- Mast shadow -->
-            <filter id="shadow">
-              <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.6"/>
-            </filter>
-          </defs>
+        <!-- View tabs -->
+        <div class="view-tabs" role="tablist">
+          <button class="view-tab active" role="tab" aria-selected="true" data-view="photo" data-i18n="buy.tab.photo">Product Photo</button>
+          <button class="view-tab" role="tab" aria-selected="false" data-view="bottom" data-i18n="buy.tab.design">Board Design</button>
+        </div>
 
-          <!-- ── Foil assembly (underneath) ── -->
-          <!-- Fuselage -->
-          <rect x="182" y="490" width="36" height="90" rx="6" fill="#333" filter="url(#shadow)"/>
-          <!-- Front wing -->
-          <ellipse cx="200" cy="540" rx="90" ry="14" fill="#222" filter="url(#shadow)"/>
-          <ellipse cx="200" cy="540" rx="88" ry="11" fill="#2a2a2a"/>
-          <!-- Rear stabiliser -->
-          <ellipse cx="200" cy="575" rx="42" ry="8" fill="#222" filter="url(#shadow)"/>
-          <ellipse cx="200" cy="575" rx="40" ry="6" fill="#2a2a2a"/>
-          <!-- Mast -->
-          <rect x="188" y="460" width="24" height="60" rx="4" fill="#1e1e1e" filter="url(#shadow)"/>
-          <rect x="191" y="462" width="4" height="56" rx="2" fill="#333"/>
+        <!-- TAB: Product Photo -->
+        <div class="view-panel active" data-view="photo">
+          <img class="buy-photo"
+               src="https://images.pexels.com/photos/9150893/pexels-photo-9150893.jpeg?auto=compress&cs=tinysrgb&w=800"
+               alt="Rider on hydrofoil board above the water at dusk" />
+        </div>
 
-          <!-- ── Board deck ── -->
-          <!-- Main board shape -->
-          <path d="M200,20 C260,20 310,60 330,120 L340,380 C340,430 310,470 280,490 L220,510 L180,510 L120,490 C90,470 60,430 60,380 L70,120 C90,60 140,20 200,20 Z"
-                fill="url(#carbon)" filter="url(#shadow)"/>
-
-          <!-- Rail highlight (left) -->
-          <path d="M200,22 C145,24 95,62 75,118 L65,378 C65,426 93,465 122,486"
-                fill="none" stroke="#444" stroke-width="3" stroke-linecap="round"/>
-          <!-- Rail highlight (right) -->
-          <path d="M200,22 C255,24 305,62 325,118 L335,378 C335,426 307,465 278,486"
-                fill="none" stroke="#444" stroke-width="3" stroke-linecap="round"/>
-          <!-- Centre line -->
-          <line x1="200" y1="40" x2="200" y2="500" stroke="#222" stroke-width="1" stroke-dasharray="6,8"/>
-
-          <!-- ── EVA grip pad ── -->
-          <path d="M200,100 C235,100 265,115 275,140 L285,360 C285,390 268,415 248,425 L200,435 L152,425 C132,415 115,390 115,360 L125,140 C135,115 165,100 200,100 Z"
-                fill="#0a0a0a" opacity="0.9"/>
-          <!-- Grip texture dots -->
-          <pattern id="grip" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
-            <circle cx="6" cy="6" r="1.5" fill="#222"/>
-          </pattern>
-          <path d="M200,100 C235,100 265,115 275,140 L285,360 C285,390 268,415 248,425 L200,435 L152,425 C132,415 115,390 115,360 L125,140 C135,115 165,100 200,100 Z"
-                fill="url(#grip)"/>
-
-          <!-- ── Foot straps ── -->
-          <!-- Front strap -->
-          <rect x="152" y="175" width="96" height="22" rx="11" fill="#1a1a1a" stroke="#444" stroke-width="1.5"/>
-          <rect x="158" y="180" width="84" height="12" rx="6" fill="#111"/>
-          <!-- Rear strap -->
-          <rect x="152" y="340" width="96" height="22" rx="11" fill="#1a1a1a" stroke="#444" stroke-width="1.5"/>
-          <rect x="158" y="345" width="84" height="12" rx="6" fill="#111"/>
-
-          <!-- ── FoilRush chess logo on deck ── -->
-          <!-- "Foil" block — white bg, black text -->
-          <rect x="136" y="245" width="58" height="34" rx="0" fill="#ffffff"/>
-          <text x="165" y="268" font-family="Outfit, sans-serif" font-weight="900" font-size="17" fill="#000000" text-anchor="middle">Foil</text>
-          <!-- "Rush" block — black bg, white border, white text -->
-          <rect x="194" y="245" width="68" height="34" rx="0" fill="#000000" stroke="#ffffff" stroke-width="2"/>
-          <text x="228" y="268" font-family="Outfit, sans-serif" font-weight="900" font-size="17" fill="#ffffff" text-anchor="middle">Rush</text>
-
-          <!-- Nose tip shine -->
-          <ellipse cx="200" cy="32" rx="18" ry="8" fill="#2a2a2a" opacity="0.6"/>
-          <!-- Tail tip -->
-          <ellipse cx="200" cy="503" rx="22" ry="6" fill="#2a2a2a" opacity="0.5"/>
-        </svg>
+        <!-- TAB: Board Design — bottom/chess view -->
+        <div class="view-panel" data-view="bottom">
+          <svg class="board-svg" viewBox="0 0 340 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bottom of FoilRush board — chess board design">
+            <defs>
+              <pattern id="chess-big" x="0" y="0" width="56" height="56" patternUnits="userSpaceOnUse">
+                <rect width="56" height="56" fill="#ffffff"/>
+                <rect x="0"  y="0"  width="28" height="28" fill="#000000"/>
+                <rect x="28" y="28" width="28" height="28" fill="#000000"/>
+              </pattern>
+              <clipPath id="boardClip">
+                <path d="M170,20 C216,20 260,50 276,100 L286,388 C286,432 260,470 228,486 L170,500 L112,486 C80,470 54,432 54,388 L64,100 C80,50 124,20 170,20 Z"/>
+              </clipPath>
+              <filter id="glow-b">
+                <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#ffffff" flood-opacity="0.15"/>
+              </filter>
+            </defs>
+            <path d="M170,20 C216,20 260,50 276,100 L286,388 C286,432 260,470 228,486 L170,500 L112,486 C80,470 54,432 54,388 L64,100 C80,50 124,20 170,20 Z"
+                  fill="url(#chess-big)" filter="url(#glow-b)"/>
+            <path d="M170,20 C216,20 260,50 276,100 L286,388 C286,432 260,470 228,486 L170,500 L112,486 C80,470 54,432 54,388 L64,100 C80,50 124,20 170,20 Z"
+                  fill="none" stroke="#ffffff" stroke-width="5"/>
+            <rect x="152" y="136" width="36" height="64" rx="8" fill="#111111" stroke="#ffffff" stroke-width="2" clip-path="url(#boardClip)"/>
+            <circle cx="163" cy="150" r="4" fill="#444"/>
+            <circle cx="177" cy="150" r="4" fill="#444"/>
+            <circle cx="163" cy="186" r="4" fill="#444"/>
+            <circle cx="177" cy="186" r="4" fill="#444"/>
+            <rect x="114" y="350" width="52" height="30" fill="#ffffff"/>
+            <text x="140" y="371" font-family="Outfit,sans-serif" font-weight="900" font-size="16" fill="#000000" text-anchor="middle">Foil</text>
+            <rect x="166" y="350" width="62" height="30" fill="#000000" stroke="#ffffff" stroke-width="2"/>
+            <text x="197" y="371" font-family="Outfit,sans-serif" font-weight="900" font-size="16" fill="#ffffff" text-anchor="middle">Rush</text>
+          </svg>
+        </div>
       </div>
       <div class="buy-details reveal-right">
         <p class="buy-brand">FoilRush</p>
-        <h2 class="buy-product-name">Scooter Pump Foil<br>96cm — Universal Mount</h2>
-        <div class="buy-price">$799</div>
-        <p class="buy-tagline">All levels · Carbon-fiber mast · Universal foil compatibility · Full kit included</p>
-        <button class="btn-primary buy-cta">Add to Cart</button>
+        <h2 class="buy-product-name" data-i18n="buy.name">Scooter Pump Foil<br>96cm — Universal Mount</h2>
+        <div class="buy-price" data-price>$799</div>
+        <p class="price-note" data-price-note></p>
+        <p class="buy-tagline" data-i18n="buy.tagline">All levels · Carbon-fiber mast · Universal foil compatibility · Full kit included</p>
+        <a href="preorder.html" class="btn-primary buy-cta" data-i18n="buy.cta">Pre-Order Now</a>
         <div class="buy-badges">
-          <span>🚚 Free Shipping</span>
-          <span>↩ 30-Day Returns</span>
-          <span>🔒 Secure Checkout</span>
+          <span data-i18n="buy.badge1">🚚 Free Shipping</span>
+          <span data-i18n="buy.badge2">↩ 30-Day Returns</span>
+          <span data-i18n="buy.badge3">🔒 Secure Checkout</span>
         </div>
       </div>
     </div>
@@ -270,13 +243,13 @@
     <div class="container footer-inner">
       <a href="#" class="nav-logo"><span class="logo-foil">Foil</span><span class="logo-rush">Rush</span></a>
       <nav class="footer-links">
-        <a href="#features">Features</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#specs">Specs</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#buy">Buy</a>
+        <a href="#features" data-i18n="nav.features">Features</a>
+        <a href="#how-it-works" data-i18n="nav.how">How It Works</a>
+        <a href="#specs" data-i18n="nav.specs">Specs</a>
+        <a href="#reviews" data-i18n="nav.reviews">Reviews</a>
+        <a href="preorder.html" data-i18n="nav.buy.short">Pre-Order</a>
       </nav>
-      <p class="footer-copy">© 2026 FoilRush. All rights reserved.</p>
+      <p class="footer-copy" data-i18n="footer.copy">© 2026 FoilRush. All rights reserved.</p>
     </div>
   </footer>
 
