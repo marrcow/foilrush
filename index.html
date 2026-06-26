@@ -172,10 +172,84 @@
   <section id="buy">
     <div class="container buy-inner">
       <div class="buy-image reveal-left">
-        <img
-          src="https://images.pexels.com/photos/19532133/pexels-photo-19532133.jpeg?auto=compress&cs=tinysrgb&w=800"
-          alt="FoilRush Scooter Pump Foil Board"
-        />
+        <svg class="board-svg" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FoilRush Scooter Pump Foil Board">
+          <defs>
+            <!-- Carbon weave pattern -->
+            <pattern id="carbon" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+              <rect width="8" height="8" fill="#111"/>
+              <rect x="0" y="0" width="4" height="4" fill="#1a1a1a"/>
+              <rect x="4" y="4" width="4" height="4" fill="#1a1a1a"/>
+              <rect x="0" y="0" width="4" height="1" fill="#222"/>
+              <rect x="4" y="4" width="4" height="1" fill="#222"/>
+            </pattern>
+            <!-- Board shape clip -->
+            <clipPath id="boardClip">
+              <path d="M200,20 C260,20 310,60 330,120 L340,380 C340,430 310,470 280,490 L220,510 L180,510 L120,490 C90,470 60,430 60,380 L70,120 C90,60 140,20 200,20 Z"/>
+            </clipPath>
+            <!-- Mast shadow -->
+            <filter id="shadow">
+              <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.6"/>
+            </filter>
+          </defs>
+
+          <!-- ── Foil assembly (underneath) ── -->
+          <!-- Fuselage -->
+          <rect x="182" y="490" width="36" height="90" rx="6" fill="#333" filter="url(#shadow)"/>
+          <!-- Front wing -->
+          <ellipse cx="200" cy="540" rx="90" ry="14" fill="#222" filter="url(#shadow)"/>
+          <ellipse cx="200" cy="540" rx="88" ry="11" fill="#2a2a2a"/>
+          <!-- Rear stabiliser -->
+          <ellipse cx="200" cy="575" rx="42" ry="8" fill="#222" filter="url(#shadow)"/>
+          <ellipse cx="200" cy="575" rx="40" ry="6" fill="#2a2a2a"/>
+          <!-- Mast -->
+          <rect x="188" y="460" width="24" height="60" rx="4" fill="#1e1e1e" filter="url(#shadow)"/>
+          <rect x="191" y="462" width="4" height="56" rx="2" fill="#333"/>
+
+          <!-- ── Board deck ── -->
+          <!-- Main board shape -->
+          <path d="M200,20 C260,20 310,60 330,120 L340,380 C340,430 310,470 280,490 L220,510 L180,510 L120,490 C90,470 60,430 60,380 L70,120 C90,60 140,20 200,20 Z"
+                fill="url(#carbon)" filter="url(#shadow)"/>
+
+          <!-- Rail highlight (left) -->
+          <path d="M200,22 C145,24 95,62 75,118 L65,378 C65,426 93,465 122,486"
+                fill="none" stroke="#444" stroke-width="3" stroke-linecap="round"/>
+          <!-- Rail highlight (right) -->
+          <path d="M200,22 C255,24 305,62 325,118 L335,378 C335,426 307,465 278,486"
+                fill="none" stroke="#444" stroke-width="3" stroke-linecap="round"/>
+          <!-- Centre line -->
+          <line x1="200" y1="40" x2="200" y2="500" stroke="#222" stroke-width="1" stroke-dasharray="6,8"/>
+
+          <!-- ── EVA grip pad ── -->
+          <path d="M200,100 C235,100 265,115 275,140 L285,360 C285,390 268,415 248,425 L200,435 L152,425 C132,415 115,390 115,360 L125,140 C135,115 165,100 200,100 Z"
+                fill="#0a0a0a" opacity="0.9"/>
+          <!-- Grip texture dots -->
+          <pattern id="grip" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
+            <circle cx="6" cy="6" r="1.5" fill="#222"/>
+          </pattern>
+          <path d="M200,100 C235,100 265,115 275,140 L285,360 C285,390 268,415 248,425 L200,435 L152,425 C132,415 115,390 115,360 L125,140 C135,115 165,100 200,100 Z"
+                fill="url(#grip)"/>
+
+          <!-- ── Foot straps ── -->
+          <!-- Front strap -->
+          <rect x="152" y="175" width="96" height="22" rx="11" fill="#1a1a1a" stroke="#444" stroke-width="1.5"/>
+          <rect x="158" y="180" width="84" height="12" rx="6" fill="#111"/>
+          <!-- Rear strap -->
+          <rect x="152" y="340" width="96" height="22" rx="11" fill="#1a1a1a" stroke="#444" stroke-width="1.5"/>
+          <rect x="158" y="345" width="84" height="12" rx="6" fill="#111"/>
+
+          <!-- ── FoilRush chess logo on deck ── -->
+          <!-- "Foil" block — white bg, black text -->
+          <rect x="136" y="245" width="58" height="34" rx="0" fill="#ffffff"/>
+          <text x="165" y="268" font-family="Outfit, sans-serif" font-weight="900" font-size="17" fill="#000000" text-anchor="middle">Foil</text>
+          <!-- "Rush" block — black bg, white border, white text -->
+          <rect x="194" y="245" width="68" height="34" rx="0" fill="#000000" stroke="#ffffff" stroke-width="2"/>
+          <text x="228" y="268" font-family="Outfit, sans-serif" font-weight="900" font-size="17" fill="#ffffff" text-anchor="middle">Rush</text>
+
+          <!-- Nose tip shine -->
+          <ellipse cx="200" cy="32" rx="18" ry="8" fill="#2a2a2a" opacity="0.6"/>
+          <!-- Tail tip -->
+          <ellipse cx="200" cy="503" rx="22" ry="6" fill="#2a2a2a" opacity="0.5"/>
+        </svg>
       </div>
       <div class="buy-details reveal-right">
         <p class="buy-brand">FoilRush</p>

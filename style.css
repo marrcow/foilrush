@@ -584,6 +584,14 @@ h1, h2, h3, h4 {
   box-shadow: 0 0 0 1px rgba(255,255,255,0.12);
 }
 
+.board-svg {
+  width: 100%;
+  max-width: 340px;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 20px 40px rgba(255,255,255,0.06));
+}
+
 .buy-brand {
   font-family: var(--font-head);
   font-weight: 700;
