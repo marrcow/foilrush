@@ -335,3 +335,90 @@ h1, h2, h3, h4 {
   color: #555;
   line-height: 1.65;
 }
+
+/* ── How It Works ── */
+#how-it-works {
+  padding: var(--section-pad) 0;
+  background: var(--dark);
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 760px;
+}
+
+.step {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.step-number {
+  font-family: var(--font-head);
+  font-size: clamp(4rem, 8vw, 6rem);
+  font-weight: 900;
+  color: var(--orange);
+  line-height: 1;
+  min-width: 2ch;
+  opacity: 0.9;
+}
+
+.step-body h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--white);
+}
+
+.step-body p {
+  color: rgba(255,255,255,0.7);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 500px) {
+  .step { flex-direction: column; gap: 0.75rem; }
+  .step-number { font-size: 3rem; }
+}
+
+/* ── Specs ── */
+#specs {
+  padding: var(--section-pad) 0;
+  background: var(--light);
+  color: var(--ink);
+}
+#specs .section-eyebrow { color: var(--orange); }
+#specs .section-title { color: var(--ink); }
+
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.specs-table tr {
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.specs-table tr:last-child { border-bottom: none; }
+
+.specs-table th {
+  text-align: left;
+  font-family: var(--font-head);
+  font-weight: 700;
+  color: var(--ink);
+  padding: 1rem 1rem 1rem 0;
+  width: 40%;
+}
+
+.specs-table td {
+  padding: 1rem 0;
+  color: #444;
+}
+
+@media (max-width: 500px) {
+  .specs-table th, .specs-table td { display: block; width: 100%; }
+  .specs-table th { padding-bottom: 0.25rem; }
+  .specs-table td { padding-top: 0; padding-bottom: 1rem; }
+}
