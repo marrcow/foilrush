@@ -422,3 +422,97 @@ h1, h2, h3, h4 {
   .specs-table th { padding-bottom: 0.25rem; }
   .specs-table td { padding-top: 0; padding-bottom: 1rem; }
 }
+
+/* ── Lifestyle shot ── */
+#lifestyle {
+  position: relative;
+  height: 60vh;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.lifestyle-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1567899382643-8e0e478c4d5f?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center 30%;
+}
+
+.lifestyle-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(10,10,15,0.3), rgba(10,10,15,0.65));
+}
+
+.lifestyle-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.lifestyle-content blockquote p {
+  font-family: var(--font-head);
+  font-size: clamp(1.75rem, 5vw, 3.5rem);
+  font-weight: 900;
+  color: var(--white);
+  letter-spacing: -0.02em;
+  text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+}
+
+/* ── Reviews ── */
+#reviews {
+  padding: var(--section-pad) 0;
+  background: var(--dark);
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.review-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.review-card:hover {
+  border-color: var(--orange);
+  transform: translateY(-4px);
+}
+
+.review-stars {
+  color: var(--orange);
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.review-text {
+  font-size: 0.975rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 1.5rem;
+}
+
+.review-author {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.review-author strong {
+  font-family: var(--font-head);
+  font-weight: 700;
+  color: var(--white);
+  font-size: 0.95rem;
+}
+.review-author span {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.45);
+}
