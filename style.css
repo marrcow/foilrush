@@ -60,7 +60,7 @@ h1, h2, h3, h4 {
 .btn-primary {
   display: inline-block;
   background: var(--white);
-  color: var(--ink);
+  color: #000000;
   font-family: var(--font-head);
   font-weight: 700;
   font-size: 1rem;
