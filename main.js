@@ -109,7 +109,7 @@ const translations = {
     'preorder.success.p2': 'with confirmation details and estimated shipping timeline.',
     'preorder.back': '← Back to product',
     'preorder.back.nav': '← Back to product',
-    'preorder.kit.1': '96cm adjustable deck with EVA grip',
+    'preorder.kit.1': '96cm deck with EVA grip pad',
     'preorder.kit.2': 'Carbon fiber foil mast (65cm)',
     'preorder.kit.3': 'Fuselage + front & rear wings',
     'preorder.kit.4': 'Scooter handlebar (removable)',
