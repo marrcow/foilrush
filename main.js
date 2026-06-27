@@ -223,7 +223,7 @@ const translations = {
     'preorder.back': '← Powrót do produktu',
     'preorder.back.nav': '← Powrót do produktu',
     'preorder.name': 'Deska Pump Foil z kierownicą<br>96 cm',
-    'preorder.kit.1': 'Deska 96 cm z regulacją i matą EVA',
+    'preorder.kit.1': 'Deska 96 cm z matą antypoślizgową EVA',
     'preorder.kit.2': 'Maszt foilowy z włókna węglowego (65 cm)',
     'preorder.kit.3': 'Kadłub + skrzydło przednie i tylne',
     'preorder.kit.4': 'Kierownica w stylu hulajnogi (zdejmowana)',
