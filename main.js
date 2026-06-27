@@ -109,6 +109,11 @@ const translations = {
     'preorder.success.p2': 'with confirmation details and estimated shipping timeline.',
     'preorder.back': '← Back to product',
     'preorder.back.nav': '← Back to product',
+    'preorder.kit.1': '96cm adjustable deck with EVA grip',
+    'preorder.kit.2': 'Carbon fiber foil mast (65cm)',
+    'preorder.kit.3': 'Fuselage + front & rear wings',
+    'preorder.kit.4': 'Scooter handlebar (removable)',
+    'preorder.kit.5': 'Full hardware kit',
   },
   pl: {
     'nav.features': 'Cechy',
@@ -218,6 +223,11 @@ const translations = {
     'preorder.back': '← Powrót do produktu',
     'preorder.back.nav': '← Powrót do produktu',
     'preorder.name': 'Deska Pump Foil z kierownicą<br>96 cm',
+    'preorder.kit.1': 'Deska 96 cm z regulacją i matą EVA',
+    'preorder.kit.2': 'Maszt foilowy z włókna węglowego (65 cm)',
+    'preorder.kit.3': 'Kadłub + skrzydło przednie i tylne',
+    'preorder.kit.4': 'Kierownica w stylu hulajnogi (zdejmowana)',
+    'preorder.kit.5': 'Kompletny zestaw śrub i osprzętu',
   }
 };
 
